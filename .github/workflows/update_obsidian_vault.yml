@@ -1,0 +1,30 @@
+name: Update obsidian vault submodule
+ 
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight
+  workflow_dispatch:  # Allows manual triggering
+ 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+ 
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for git info
+          submodules: true
+          token: ${{ secrets.TOKEN}}
+      - name: Update obsidian submodule
+        continue-on-error: true
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git submodule update --remote obsidian-backup
+          git add obsidian-backup
+          git commit -m "Auto-update Obsidian submodule"
+          git push origin main

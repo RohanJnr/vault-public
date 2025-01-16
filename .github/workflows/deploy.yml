@@ -1,9 +1,7 @@
 name: Deploy Quartz site to GitHub Pages
  
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
  
 permissions:
   contents: write
@@ -23,15 +21,6 @@ jobs:
           fetch-depth: 0 # Fetch all history for git info
           submodules: true
           token: ${{ secrets.TOKEN}}
-      - name: Update obsidian submodule
-        continue-on-error: true
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git submodule update --remote obsidian-backup
-          git add obsidian-backup
-          git commit -m "Auto-update Obsidian submodule"
-          git push origin main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
