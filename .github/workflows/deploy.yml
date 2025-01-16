@@ -27,7 +27,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git submodule update --remote DbConnector
+          git submodule update --remote obsidian-backup
           git add obsidian-backup
           git commit -m "Auto-update Obsidian submodule"
           git push origin main
