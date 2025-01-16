@@ -31,7 +31,7 @@ jobs:
       - name: Update obsidian submodule
         run: |
           git submodule update --remote --merge
-          git add content/obsidian
+          git add .
           git commit -m "Auto-update Obsidian submodule"
           git push origin main
       - name: Run restructure script
