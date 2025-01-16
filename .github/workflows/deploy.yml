@@ -24,6 +24,7 @@ jobs:
           submodules: true
           token: ${{ secrets.TOKEN}}
       - name: Update obsidian submodule
+        continue-on-error: true
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
