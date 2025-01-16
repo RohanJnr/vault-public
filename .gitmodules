@@ -1,0 +1,3 @@
+[submodule "obsidian-backup"]
+	path = obsidian-backup
+	url = git@github.com:RohanJnr/obsidian-backup.git
