@@ -23,7 +23,10 @@ jobs:
         with:
             repository: rohanjnr/obsidian-backup
             token: ${{ secrets.TOKEN }}
-            path: obsidian
+            path: obsidian-backup
+      
+      - name: run LS
+        run: ls -l
 
       - name: Create content folder
         run: ./create_content.sh
