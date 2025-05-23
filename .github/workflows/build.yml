@@ -1,4 +1,4 @@
-name: Update obsidian vault submodule
+name: build vault
  
 on:
   schedule:
