@@ -14,12 +14,12 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.TOKEN}}
 
       - name: Checkout obsidian vault
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
             repository: rohanjnr/obsidian-backup
             token: ${{ secrets.TOKEN }}
@@ -42,7 +42,7 @@ jobs:
         run: npx quartz build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: public
 
