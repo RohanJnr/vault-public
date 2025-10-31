@@ -24,10 +24,6 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
-        <script>
-  window.reflectConfig = { key: "widget_07eb3e49aba44d8e", position: "bottom_right" };
-</script>
-<script async src="https://cdn.reflectfeedback.com/widgets/widget_07eb3e49aba44d8e/widget.js"></script>
       </footer>
     )
   }

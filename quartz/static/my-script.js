@@ -1,0 +1,1 @@
+window.reflectConfig = { key: "widget_529575f39e33463f", position: "bottom_right" };

@@ -263,6 +263,9 @@ export function renderPage(
             <Footer {...componentData} />
           </Body>
         </div>
+        
+        <script async src="https://cdn.reflectfeedback.com/widgets/widget_529575f39e33463f/widget.js"></script>
+        <script src="/static/my-script.js" defer></script>
       </body>
       {pageResources.js
         .filter((resource) => resource.loadTime === "afterDOMReady")
